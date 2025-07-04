@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f2f6ff;
+  color: #222;
+  text-align: center;
+  padding: 20px;
+}
+header h1 {
+  font-size: 2em;
+  color: #113366;
+}
+header h1 span {
+  color: #0055aa;
+}
+.versiculo {
+  font-style: italic;
+  margin-top: 10px;
+  color: #444;
+}
+.versiculo span {
+  font-weight: bold;
+  color: #113366;
+}
+
+.menu {
+  margin: 40px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 900px;
+}
+.item {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  width: 220px;
+  padding: 20px;
+  text-decoration: none;
+  color: #113366;
+  transition: transform 0.2s;
+}
+.item:hover {
+  transform: translateY(-5px);
+}
+.item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.item p {
+  font-size: 1em;
+}
+.item .sub {
+  font-size: 0.8em;
+  color: #0077cc;
+}
+
+/* Modal estilo */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  text-align: left;
+}
+.modal-content h2 {
+  margin-bottom: 15px;
+  color: #113366;
+}
+.modal-content ul {
+  list-style: none;
+}
+.modal-content li {
+  margin-bottom: 10px;
+}
+.modal-content a {
+  color: #0077cc;
+  text-decoration: none;
+}
+.close {
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  margin-top: 60px;
+  font-size: 0.9em;
+  color: #666;
+}
+footer p {
+  margin: 5px 0;
+}
