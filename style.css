@@ -30,6 +30,7 @@ footer {
   text-align: center;
   padding: 10px;
 }
+
 footer p {
   margin: 5px 0;
 }
@@ -44,51 +45,13 @@ footer p {
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
-.titulo-contenedor h1 {
-  font-size: 1.2em;
-  margin-bottom: 5px;
-  animation: aparecer 1.2s ease-in-out;
-  line-height: 1.4;
-}
-
-.titulo-contenedor h1 .titulo-arriba {
+/* Logo principal en encabezado */
+.logo-principal {
+  max-width: 180px;
+  height: auto;
   display: block;
-  font-size: 1em;
-  color: #ffffff;
-  white-space: nowrap;
-}
-
-.titulo-contenedor h1 .titulo-abajo {
-  display: block;
-  font-size: 1.2em;
-  color: #00cc66;
-  font-weight: bold;
-  margin-top: 5px;
-  white-space: nowrap;
-}
-
-.titulo-contenedor .versiculo {
-  font-style: italic;
-  font-size: 1.1em;
-  color: #e0f0ff;
-  animation: aparecer 2s ease-in-out;
-  margin-top: 10px;
-}
-
-.titulo-contenedor .versiculo span {
-  font-weight: bold;
-  color: #ffffff;
-}
-
-@keyframes aparecer {
-  from {
-    opacity: 0;
-    transform: translateY(-15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  margin: 0 auto;
+  padding: 20px 0;
 }
 
 /* Menú principal */
@@ -134,6 +97,21 @@ footer p {
 .item .sub {
   font-size: 0.8em;
   color: #0077cc;
+}
+
+/* Versículo al final */
+.versiculo-final {
+  font-style: italic;
+  font-size: 1em;
+  color: #004aad;
+  text-align: center;
+  margin: 30px 0 15px 0;
+}
+
+.versiculo-final span {
+  font-weight: bold;
+  display: block;
+  margin-top: 5px;
 }
 
 /* Modal */
