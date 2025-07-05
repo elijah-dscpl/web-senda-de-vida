@@ -1,0 +1,6 @@
+services:
+  - type: static
+    name: web-senda-de-vida
+    env: static
+    staticPublishPath: .
+    buildCommand: ""
