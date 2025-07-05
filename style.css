@@ -45,24 +45,26 @@ footer p {
 }
 
 .titulo-contenedor h1 {
-  font-size: 2em;
+  font-size: 1.2em;
   margin-bottom: 5px;
   animation: aparecer 1.2s ease-in-out;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 .titulo-contenedor h1 .titulo-arriba {
   display: block;
   font-size: 1em;
   color: #ffffff;
+  white-space: nowrap;
 }
 
 .titulo-contenedor h1 .titulo-abajo {
   display: block;
-  font-size: 1.4em;
-  color: #00ff66;
+  font-size: 1.2em;
+  color: #00cc66;
   font-weight: bold;
   margin-top: 5px;
+  white-space: nowrap;
 }
 
 .titulo-contenedor .versiculo {
@@ -99,6 +101,12 @@ footer p {
   max-width: 900px;
 }
 .item {
+  .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
