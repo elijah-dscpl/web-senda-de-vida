@@ -51,8 +51,8 @@ footer p {
   height: auto;
   display: block;
   margin: 0 auto;
-  padding: 20px 0;
-  background-color: transparent;
+  background: transparent;
+  border: none;
 }
 
 /* Menú principal */
