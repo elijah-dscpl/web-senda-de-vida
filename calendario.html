@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Programa Semanal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="encabezado">
+    <h1>Programa Semanal de Actividades</h1>
+  </header>
+
+  <main>
+    <div class="calendario" id="calendario"></div>
+  </main>
+
+  <footer>
+    <p>Jagüey Grande, Cuba. Calle 15 / 50 y 52</p>
+    <p>SENDA DE VIDA &copy; 2025</p>
+  </footer>
+
+  <script>
+    fetch('actividades.json')
+      .then(res => res.json())
+      .then(data => {
+        const calendario = document.getElementById('calendario');
+        for (const [dia, actividad] of Object.entries(data)) {
+          const card = document.createElement('div');
+          card.className = 'card-dia';
+          card.innerHTML = `<h3>${dia.charAt(0).toUpperCase() + dia.slice(1)}</h3><p>${actividad}</p>`;
+          calendario.appendChild(card);
+        }
+      });
+  </script>
+</body>
+</html>
