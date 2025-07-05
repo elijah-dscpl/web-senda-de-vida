@@ -52,6 +52,7 @@ footer p {
   display: block;
   margin: 0 auto;
   padding: 20px 0;
+  background-color: transparent;
 }
 
 /* Menú principal */
