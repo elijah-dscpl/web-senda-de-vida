@@ -57,12 +57,11 @@ footer p {
 
 /* Menú principal */
 .menu {
-  margin: 40px auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
-  max-width: 900px;
+  max-width: 600px;
+  margin: 40px auto;
 }
 
 .item {
