@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctrinas Fundamentales</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="titulo-contenedor">
+      <img src="icons/doctrinas.png" alt="Icono doctrinas" class="logo-pagina">
+      <h1>Doctrinas Fundamentales de las Asambleas de Dios</h1>
+    </div>
+  </header>
+
+  <main class="contenido">
+    <section class="intro-doctrinas">
+      <p>Estas 16 verdades fundamentales representan nuestras convicciones bíblicas no negociables como Iglesia Evangélica Pentecostal perteneciente a las Asambleas de Dios.</p>
+    </section>
+
+    <section class="acordeon">
+      <div class="acordeon-item">
+        <button class="acordeon-btn">1. La inspiración de las Escrituras</button>
+        <div class="acordeon-contenido">
+          <p>Las Escrituras son verbalmente inspiradas por Dios y son la revelación de Dios para el hombre. <strong>Versículos:</strong> 2 Ti. 3:15-17; 1 Ts. 2:13; 2 P. 1:21.</p>
+        </div>
+      </div>
+
+      <div class="acordeon-item">
+        <button class="acordeon-btn">2. El único Dios verdadero</button>
+        <div class="acordeon-contenido">
+          <p>Se ha revelado como Padre, Hijo y Espíritu Santo. <strong>Versículos:</strong> Dt. 6:4; Is. 43:10-11; Mt. 28:19; Lc. 3:22.</p>
+        </div>
+      </div>
+
+      <!-- Repite este bloque por cada doctrina hasta la número 16 -->
+    </section>
+  </main>
+
+  <footer>
+    <p>Jagüey Grande, Cuba. Calle 15 / 50 y 52</p>
+    <p>SENDA DE VIDA &copy; 2025</p>
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll(".acordeon-btn");
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("activo");
+        const contenido = btn.nextElementSibling;
+        contenido.style.display = contenido.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>
