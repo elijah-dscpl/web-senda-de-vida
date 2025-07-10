@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Generación que Resplandece</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="encabezado">
+  <h1>Generación que Resplandece</h1>
+</header>
+
+<main class="contenido-jovenes">
+
+  <section class="estudio">
+    <h2>📖 Tiempo de Estudio Bíblico</h2>
+    <p>Todos los viernes a las <strong>8:30 PM</strong>.</p>
+    <p><em>Actualmente estudiamos el Evangelio de Juan, capítulo 1.</em></p>
+  </section>
+
+  <section class="fotos-jovenes">
+    <h2>📸 Recuerdos de Juventud</h2>
+    <div class="collage" id="galeria"></div>
+  </section>
+
+  <section class="peticiones">
+    <h2>🙏 PETICIONES DE ORACIÓN</h2>
+    <a href="peticionesjovenes.html" class="btn-oracion">Escribir mi petición</a>
+    <p>Si tienes algo en tu corazón o conoces a alguien que necesita oración, ¡puedes escribirlo ahí! Todo es confidencial y entre nosotros.</p>
+  </section>
+
+  <section class="contacto-jovenes">
+    <h2>📱 Contacto y Conexión</h2>
+    <p><strong>Grupo de WhatsApp:</strong> <a href="https://chat.whatsapp.com/Be8TuHmrG0d1bQ4Kpd4NnD" target="_blank">Generación que Resplandece</a></p>
+    <p><strong>Líder de Jóvenes:</strong> Elizabet Sobrino — <a href="tel:+5355205153">+53 55205153</a></p>
+  </section>
+
+  <section class="cumpleaños">
+    <h2>🎉 Lista de Cumpleaños 🥳❤️</h2>
+    <div id="cumple-hoy" class="especial"></div>
+    <ul id="lista-cumples"></ul>
+  </section>
+
+  <section class="anadir-cumple">
+    <h2>➕ Añade tu cumpleaños</h2>
+    <form id="formCumple">
+      <input type="text" id="nombre" placeholder="Nombre y apellidos" required>
+      <input type="date" id="fecha" required>
+      <button type="submit">Añadir</button>
+    </form>
+  </section>
+
+</main>
+
+<footer>
+  <p>Jagüey Grande, Cuba. Calle 15 / 50 y 52</p>
+  <p>SENDA DE VIDA &copy; 2025</p>
+</footer>
+
+<script>
+  // Cargar imágenes desde carpeta pics/
+  const galeria = document.getElementById("galeria");
+  const imagenes = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"]; // últimas 5 imágenes
+  imagenes.forEach((img, i) => {
+    const elemento = document.createElement("img");
+    elemento.src = `pics/${img}`;
+    elemento.alt = "Jovenes";
+    elemento.className = "img-thumb";
+    elemento.onclick = () => {
+      window.open(`pics/${img}`, '_blank');
+    };
+    galeria.appendChild(elemento);
+  });
+
+  // Mostrar cumpleaños
+  fetch('cumpleaños.json')
+    .then(res => res.json())
+    .then(data => {
+      const hoy = new Date();
+      const lista = document.getElementById('lista-cumples');
+      const especial = document.getElementById('cumple-hoy');
+
+      const cumpleOrdenados = data.sort((a, b) =>
+        a.nombre.localeCompare(b.nombre)
+      );
+
+      let encontrado = false;
+
+      cumpleOrdenados.forEach(cumple => {
+        const fecha = new Date(cumple.fecha);
+        const fechaFormateada = `${fecha.getDate()} de ${fecha.toLocaleString('es', { month: 'long' })} del ${fecha.getFullYear()}`;
+        
+        // Mostrar si cumple hoy
+        if (fecha.getDate() === hoy.getDate() && fecha.getMonth() === hoy.getMonth()) {
+          especial.innerHTML = `<strong>🎂 ¡Hoy cumple años ${cumple.nombre}! 🎉</strong>`;
+          encontrado = true;
+        }
+
+        const li = document.createElement('li');
+        li.textContent = `• ${cumple.nombre}: ${fechaFormateada}`;
+        lista.appendChild(li);
+      });
+
+      if (!encontrado) {
+        especial.textContent = "🎈 ¡Consulta quién será el próximo en celebrar su cumpleaños!";
+      }
+    });
+
+  // Enviar cumpleaños por WhatsApp
+  document.getElementById("formCumple").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const nombre = document.getElementById("nombre").value;
+    const fecha = document.getElementById("fecha").value;
+
+    const mensaje = encodeURIComponent(`¡Hola, Dios te bendiga! ¡Mi nombre es ${nombre} y mi fecha de cumpleaños es el ${fecha}!`);
+    window.open(`https://wa.me/5353910525?text=${mensaje}`, '_blank');
+  });
+</script>
+
+</body>
+</html>
