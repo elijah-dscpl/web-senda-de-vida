@@ -1,232 +1,239 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Generación que Resplandece</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ministerio de Jóvenes</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #f2f6ff;
-      color: #222;
+      background: #f5f9ff;
       margin: 0;
       padding: 0;
+      color: #222;
     }
 
-    header.encabezado {
-      background: linear-gradient(to right, #004aad, #0088ff);
-      color: white;
-      padding: 30px 20px;
+    header {
+      background: linear-gradient(to right, #004aad, #00aaff);
+      padding: 30px;
       text-align: center;
-      border-radius: 0 0 25px 25px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-    }
-
-    .contenido-jovenes {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-      line-height: 1.6;
-      color: #333;
-    }
-
-    section {
-      margin-bottom: 40px;
-    }
-
-    .collage {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .img-thumb {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-
-    .img-thumb:hover {
-      transform: scale(1.1);
-    }
-
-    .btn-oracion {
-      display: inline-block;
-      margin: 10px 0;
-      padding: 10px 20px;
-      background: #004aad;
+      border-radius: 0 0 30px 30px;
       color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
     }
 
-    .contacto-jovenes p, .cumpleaños p, .cumpleaños li {
-      margin: 5px 0;
-    }
-
-    .anadir-cumple form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      max-width: 400px;
-    }
-
-    .anadir-cumple input,
-    .anadir-cumple button {
-      padding: 10px;
-      font-size: 1em;
-    }
-
-    .anadir-cumple button {
-      background-color: #0077cc;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .anadir-cumple button:hover {
-      background-color: #004aad;
-    }
-
-    .especial {
-      font-weight: bold;
-      color: #006600;
+    header img {
+      max-width: 140px;
+      border-radius: 50%;
       margin-bottom: 10px;
     }
 
-    footer {
-      margin-top: 50px;
-      font-size: 0.9em;
-      color: #666;
-      text-align: center;
-      padding: 10px;
+    header h1 {
+      font-size: 1.8em;
+      margin: 0;
     }
 
-    footer p {
+    section {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .separador {
+      border-top: 2px solid #ccc;
+      margin: 40px 0;
+    }
+
+    .teb {
+      background-color: #eaf4ff;
+      border: 2px solid #0088cc;
+      border-radius: 10px;
+      padding: 20px;
+      font-style: italic;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .galeria img {
+      width: 180px;
+      height: auto;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    .contacto {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .contacto ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .contacto li {
+      margin: 10px 0;
+      font-size: 1em;
+    }
+
+    .contacto a {
+      color: #0077cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .cumple-form {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .cumple-form input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+      flex: 1;
+    }
+
+    .cumple-form button {
+      background-color: #004aad;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .cumple-form button:hover {
+      background-color: #0077ff;
+    }
+
+    h2 {
+      color: #004aad;
+      margin-bottom: 15px;
+    }
+
+    .lista-cumples {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .lista-cumples ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .lista-cumples li {
       margin: 5px 0;
     }
   </style>
-  
 </head>
 <body>
 
-<header class="encabezado">
-  <h1>Generación que Resplandece</h1>
-</header>
+  <header>
+    <img src="icons/jovenes.jpg" alt="Logo Jóvenes" />
+    <h1>Ministerio de Jóvenes</h1>
+  </header>
 
-<main class="contenido-jovenes">
-
-  <section class="estudio">
-    <h2>📖 Tiempo de Estudio Bíblico</h2>
-    <p>Todos los viernes a las <strong>8:30 PM</strong>.</p>
-    <p><em>Actualmente estudiamos el Evangelio según Juan.</em></p>
+  <section>
+    <div class="teb">
+      📖 Todos los viernes a las 8:30 PM nos reunimos para el Tiempo de Estudio Bíblico (TEB). Actualmente estamos estudiando el Evangelio según Juan, capítulo 2 y 3. ¡Ven y participa!
+    </div>
   </section>
 
-  <section class="fotos-jovenes">
-    <h2>📸 Recuerdos de Juventud</h2>
-    <div class="collage" id="galeria"></div>
+  <div class="separador"></div>
+
+  <section>
+    <h2>GALERÍA DE RECUERDOS</h2>
+    <div class="galeria">
+      <!-- Aquí van las 5 fotos más recientes -->
+      <img src="pics/1.jpg" alt="Foto 1">
+      <img src="pics/2.jpg" alt="Foto 2">
+      <img src="pics/3.jpg" alt="Foto 3">
+      <img src="pics/4.jpg" alt="Foto 4">
+      <img src="pics/5.jpg" alt="Foto 5">
+    </div>
   </section>
 
-  <section class="peticiones">
-    <h2>🙏 PETICIONES DE ORACIÓN</h2>
-    <a href="peticionesjovenes.html" class="btn-oracion">Escribir mi petición</a>
+  <div class="separador"></div>
+
+  <section>
+    <h2>📩 Peticiones de Oración</h2>
+    <p><a href="peticionesjovenes.html" class="btn-peticion">🛐 HAZ CLICK AQUÍ PARA ESCRIBIR TU PETICIÓN</a></p>
     <p>Si tienes algo en tu corazón o conoces a alguien que necesita oración, ¡puedes escribirlo ahí! Todo es confidencial y entre nosotros.</p>
   </section>
 
-  <section class="contacto-jovenes">
-    <h2>📱 Contacto y Conexión</h2>
-    <p><strong>Grupo de WhatsApp:</strong> <a href="https://chat.whatsapp.com/Be8TuHmrG0d1bQ4Kpd4NnD" target="_blank">Generación que Resplandece</a></p>
-    <p><strong>Líder de Jóvenes:</strong> Elizabet Sobrino — <a href="tel:+5355205153">+53 55205153</a></p>
+  <div class="separador"></div>
+
+  <section class="contacto">
+    <h2>🤝 Conexión y Contacto</h2>
+    <ul>
+      <li><strong>Grupo de WhatsApp:</strong> <a href="https://chat.whatsapp.com/Be8TuHmrG0d1bQ4Kpd4NnD" target="_blank">Generación que Resplandece</a></li>
+      <li><strong>Líder de Jóvenes:</strong> Elizabet Sobrino – 📞 +53 55205153</li>
+    </ul>
   </section>
 
-  <section class="cumpleaños">
+  <div class="separador"></div>
+
+  <section>
     <h2>🎉 Lista de Cumpleaños 🥳❤️</h2>
-    <div id="cumple-hoy" class="especial"></div>
-    <ul id="lista-cumples"></ul>
+    <div class="lista-cumples">
+      <ul id="cumples-lista">
+        <!-- Aquí se cargará automáticamente la lista -->
+      </ul>
+    </div>
   </section>
 
-  <section class="anadir-cumple">
-    <h2>➕ Añade tu cumpleaños</h2>
-    <form id="formCumple">
+  <div class="separador"></div>
+
+  <section>
+    <h2>🎁 Añade tu Cumpleaños</h2>
+    <form class="cumple-form" onsubmit="enviarCumple()">
       <input type="text" id="nombre" placeholder="Nombre y apellidos" required>
       <input type="date" id="fecha" required>
       <button type="submit">Añadir</button>
     </form>
   </section>
 
-</main>
+  <script>
+    // Enviar por WhatsApp
+    function enviarCumple() {
+      event.preventDefault();
+      const nombre = document.getElementById("nombre").value;
+      const fecha = document.getElementById("fecha").value;
+      const mensaje = `¡Hola, Dios te bendiga! ¡Mi nombre es ${nombre} y mi fecha de cumpleaños es el ${fecha}!`;
+      const whatsappURL = `https://wa.me/+5363910525?text=${encodeURIComponent(mensaje)}`;
+      window.open(whatsappURL, "_blank");
+    }
 
-<footer>
-  <p>Jagüey Grande, Cuba. Calle 15 / 50 y 52</p>
-  <p>SENDA DE VIDA &copy; 2025</p>
-</footer>
-
-<script>
-  // Cargar imágenes desde carpeta pics/
-  const galeria = document.getElementById("galeria");
-  const imagenes = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"]; // últimas 5 imágenes
-  imagenes.forEach((img, i) => {
-    const elemento = document.createElement("img");
-    elemento.src = `pics/${img}`;
-    elemento.alt = "Jovenes";
-    elemento.className = "img-thumb";
-    elemento.onclick = () => {
-      window.open(`pics/${img}`, '_blank');
-    };
-    galeria.appendChild(elemento);
-  });
-
-  // Mostrar cumpleaños
-  fetch('cumpleaños.json')
-    .then(res => res.json())
-    .then(data => {
-      const hoy = new Date();
-      const lista = document.getElementById('lista-cumples');
-      const especial = document.getElementById('cumple-hoy');
-
-      const cumpleOrdenados = data.sort((a, b) =>
-        a.nombre.localeCompare(b.nombre)
-      );
-
-      let encontrado = false;
-
-      cumpleOrdenados.forEach(cumple => {
-        const fecha = new Date(cumple.fecha);
-        const fechaFormateada = `${fecha.getDate()} de ${fecha.toLocaleString('es', { month: 'long' })} del ${fecha.getFullYear()}`;
-        
-        // Mostrar si cumple hoy
-        if (fecha.getDate() === hoy.getDate() && fecha.getMonth() === hoy.getMonth()) {
-          especial.innerHTML = `<strong>🎂 ¡Hoy cumple años ${cumple.nombre}! 🎉</strong>`;
-          encontrado = true;
-        }
-
-        const li = document.createElement('li');
-        li.textContent = `• ${cumple.nombre}: ${fechaFormateada}`;
-        lista.appendChild(li);
+    // Cargar lista desde cumpleaños.json
+    fetch("cumpleaños.json")
+      .then(response => response.json())
+      .then(data => {
+        const lista = document.getElementById("cumples-lista");
+        data.sort((a, b) => a.nombre.localeCompare(b.nombre));
+        data.forEach(persona => {
+          const item = document.createElement("li");
+          item.textContent = `• ${persona.nombre}: ${persona.fecha}`;
+          lista.appendChild(item);
+        });
       });
-
-      if (!encontrado) {
-        especial.textContent = "🎈 ¡Consulta quién será el próximo en celebrar su cumpleaños!";
-      }
-    });
-
-  // Enviar cumpleaños por WhatsApp
-  document.getElementById("formCumple").addEventListener("submit", function(e) {
-    e.preventDefault();
-    const nombre = document.getElementById("nombre").value;
-    const fecha = document.getElementById("fecha").value;
-
-    const mensaje = encodeURIComponent(`¡Hola, Dios te bendiga! ¡Mi nombre es ${nombre} y mi fecha de cumpleaños es el ${fecha}!`);
-    window.open(`https://wa.me/5353910525?text=${mensaje}`, '_blank');
-  });
-</script>
-
+  </script>
 </body>
 </html>
