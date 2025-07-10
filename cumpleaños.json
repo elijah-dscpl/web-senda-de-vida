@@ -1,10 +1,39 @@
 [
-  {
-    "nombre": "Elizabeth Montero Batista",
-    "fecha": "2009-02-07"
-  },
-  {
-    "nombre": "Elías D. Montero Batista",
-    "fecha": "2025-10-17"
-  }
+  { "nombre": "Tito", "fecha": "4 enero" },
+  { "nombre": "Dailys", "fecha": "5 enero" },
+  { "nombre": "Briana", "fecha": "20 enero" },
+  { "nombre": "Dairon", "fecha": "27 enero" },
+  { "nombre": "Lizzie", "fecha": "7 febrero" },
+  { "nombre": "Dieguito", "fecha": "7 febrero" },
+  { "nombre": "Lis Daniela", "fecha": "9 febrero" },
+  { "nombre": "Noralvis", "fecha": "12 febrero" },
+  { "nombre": "Samantha", "fecha": "20 febrero" },
+  { "nombre": "Wilfredo", "fecha": "2 marzo" },
+  { "nombre": "Eriel", "fecha": "19 marzo" },
+  { "nombre": "Maria Alejandra", "fecha": "19 marzo" },
+  { "nombre": "Guillermo", "fecha": "6 abril" },
+  { "nombre": "Norbe", "fecha": "13 abril" },
+  { "nombre": "Clau", "fecha": "3 mayo" },
+  { "nombre": "Gabi", "fecha": "9 mayo" },
+  { "nombre": "Melody", "fecha": "24 junio" },
+  { "nombre": "Lauren", "fecha": "26 junio" },
+  { "nombre": "Dani", "fecha": "6 julio" },
+  { "nombre": "Adrialys", "fecha": "8 agosto" },
+  { "nombre": "Víctor", "fecha": "10 agosto" },
+  { "nombre": "Abel", "fecha": "17 agosto" },
+  { "nombre": "Deilyn", "fecha": "21 agosto" },
+  { "nombre": "Daniela", "fecha": "24 agosto" },
+  { "nombre": "Noemí", "fecha": "14 septiembre" },
+  { "nombre": "Sailemi", "fecha": "16 septiembre" },
+  { "nombre": "Angélica", "fecha": "22 septiembre" },
+  { "nombre": "Nanda", "fecha": "22 septiembre" },
+  { "nombre": "Elisabet", "fecha": "27 septiembre" },
+  { "nombre": "Randy", "fecha": "30 septiembre" },
+  { "nombre": "Onelis", "fecha": "3 octubre" },
+  { "nombre": "Keivel", "fecha": "12 octubre" },
+  { "nombre": "Elías", "fecha": "17 octubre" },
+  { "nombre": "Lis Mariam", "fecha": "25 octubre" },
+  { "nombre": "Keila", "fecha": "4 noviembre" },
+  { "nombre": "Adrian", "fecha": "13 noviembre" },
+  { "nombre": "Fernanda Abril", "fecha": "8 diciembre" }
 ]
