@@ -4,7 +4,116 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Generación que Resplandece</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f6ff;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+
+    header.encabezado {
+      background: linear-gradient(to right, #004aad, #0088ff);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 0 0 25px 25px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+
+    .contenido-jovenes {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    .collage {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .img-thumb {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .img-thumb:hover {
+      transform: scale(1.1);
+    }
+
+    .btn-oracion {
+      display: inline-block;
+      margin: 10px 0;
+      padding: 10px 20px;
+      background: #004aad;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .contacto-jovenes p, .cumpleaños p, .cumpleaños li {
+      margin: 5px 0;
+    }
+
+    .anadir-cumple form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 400px;
+    }
+
+    .anadir-cumple input,
+    .anadir-cumple button {
+      padding: 10px;
+      font-size: 1em;
+    }
+
+    .anadir-cumple button {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .anadir-cumple button:hover {
+      background-color: #004aad;
+    }
+
+    .especial {
+      font-weight: bold;
+      color: #006600;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #666;
+      text-align: center;
+      padding: 10px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+  </style>
+  
 </head>
 <body>
 
